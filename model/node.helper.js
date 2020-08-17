@@ -1,6 +1,6 @@
 const Node = require('./node.model');
 
-class NodeHelper extends Node {
+class NodeHelper {
     constructor() {
         throw new Error('You shall not instantiate this, Helper is static');
     }
