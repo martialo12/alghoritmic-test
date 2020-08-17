@@ -9,7 +9,7 @@
     "mocha": "^8.0.1"
   },
   "scripts": {
-    "test": "--timeout 30000 --recursive"
+    "test": "mocha --timeout 30000 --recursive"
   },
   "author": "",
   "license": "ISC"

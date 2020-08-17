@@ -1,17 +1,13 @@
 // this model represent a simple node containing some infos
 class Node {
 
-    constructor(id, value) {
-        this._id = id;
-        this._value = value;
-        this._childrens = {}; //this could be a list, using obj is pretty faster in searching nodes
-    }
-
     constructor(jsonValue) {
+        this._id = jsonValue.id;
+        this._value = jsonValue.value;
+        this._childrens = {}; //this could be a list, using obj is pretty faster in searching nodes
         // we assert the jsonValue is correct, so
-        this(jsonValue.id, jsonValue.value);
         if(jsonValue.childrens) {
-            jsonValue.forEach(child => this.addChildren(new Node(child)));
+            jsonValue.childrens.forEach(child => this.addChildren(new Node(child)));
         }
     }
 
